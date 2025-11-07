@@ -41,7 +41,7 @@ const mockupContainerVariants = {
   },
 };
 
-const pcMockupVariants = {
+const MockupVariants = {
   hidden: { opacity: 0, scale: 0.95 },
   visible: { 
     opacity: 1, 
@@ -74,19 +74,19 @@ function App() {
   return (
     <>
       <section
-        className='overflow-hidden flex lg:flex-row flex-col lg:h-screen min-h-screen items-center justify-center px-8 py-10 lg:px-10 relative'
+        className='overflow-hidden flex lg:flex-row flex-col lg:h-screen min-h-screen items-center lg:justify-start justify-center px-8 py-10 lg:pl-16 lg:pr-0 relative bg-white'
       >
         <motion.article
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className='flex flex-col gap-2'
+          className='flex flex-col gap-2 lg:w-2/5 w-full z-10'
         >
           <motion.img
             src={haxtrace_logo}
             variants={itemVariants}
             className='h-4 lg:h-5 w-fit'
-            alt="Logifleet Logo"
+            alt="HaxTrace Logo"
           />
           <motion.h1
             variants={itemVariants}
@@ -132,7 +132,7 @@ function App() {
               </a>
             </motion.div>
             <motion.a
-              whileHover={{ scale: 1.05, color: '#32B39C' }}
+              whileHover={{ scale: 1.05, color: '#857EE0' }}
               whileTap={{ scale: 0.95 }}
               className='text-zinc-300 text-sm hover:font-semibold transition-all duration-200'
               href="https://www.quadrant.com.ar/" target="_blank" rel="noopener noreferrer"
@@ -145,19 +145,20 @@ function App() {
           variants={mockupContainerVariants}
           initial="hidden"
           animate="visible"
-          className='relative sm:h-fit px-0 lg:h-auto sm:px-20'
+          className='lg:absolute relative right-0 bottom-0 lg:w-2/4 xl:w-2/4 2xl:w-2/5 w-3/4 lg:h-full h-auto flex items-end justify-end '
         >
           <motion.img
-            variants={pcMockupVariants}
+            variants={MockupVariants}
             src={haxtrace_mockup}
-            className='h-full'
-            alt="Logifleet en PC"
+            className='lg:h-full h-auto w-full object-contain lg:object-right-bottom object-center'
+            alt="HaxTrace Dashboard"
           />
+          <div className='absolute bottom-0-0 left-0 w-full h-1/5 bg-gradient-to-t from-white via-white/70 to-white/0 pointer-events-none'></div>
         </motion.aside>
         <motion.footer
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, transition: { delay: 1.5, duration: 0.8 } }}
-          className='lg:absolute relative bottom-0 lg:h-10 h-auto mt-8 lg:mt-0 items-center justify-center lg:left-1/2 lg:-translate-x-1/2 z-20 px-4 py-2 text-zinc-400 text-xs flex flex-row'
+          className='absolute bottom-0 w-full lg:h-10 h-auto pt-6 pb-4 lg:py-2 items-center justify-center lg:left-0 z-20 px-4 text-zinc-400 text-xs flex flex-row'
         >
           <p>
             Powered By
