@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Check } from 'lucide-react';
 
 const Feature = ({title, description, index}) => {
 
@@ -19,9 +20,10 @@ const Feature = ({title, description, index}) => {
         <motion.article 
             key={index}
             variants={itemVariants} 
-            className="border border-black px-4 py-1 rounded-md"
+            className="text-center px-4 py-4 rounded-md"
         >
-            <h3 className="text-sm font-semibold text-zinc-600">{title}</h3>
+            <Check className="inline-block w-8 h-8 mb-2 bg-primary rounded-full text-white p-2" />
+            <h3 className="text-sm font-semibold py-1 text-zinc-600">{title}</h3>
             <p className="text-xs text-zinc-500">
                 {description}
             </p>

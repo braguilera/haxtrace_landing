@@ -3,6 +3,7 @@ import haxtrace_mockup from './assets/haxtrace_mockup.webp'
 import quadrant_logo from './assets/quadrant_logo.svg'
 import haxtrace_logo from './assets/haxtrace_logo.webp'
 import Feature from './components/Feature';
+import FloatingOrb from './components/FloatingOrb';
 import { motion } from 'framer-motion';
 
 const itemVariants = {
@@ -76,6 +77,36 @@ function App() {
       <section
         className='overflow-hidden flex lg:flex-row flex-col lg:h-screen min-h-screen items-center lg:justify-start justify-center px-8 py-10 lg:pl-16 lg:pr-0 relative bg-white'
       >
+        {/* Bolas flotantes de fondo */}
+        <FloatingOrb 
+          size={400} 
+          color="#E8E6FF" 
+          blur={120}
+          initialX={-100}
+          initialY={50}
+          animationDuration={25}
+          moveRange={40}
+        />
+
+        <FloatingOrb 
+          size={300} 
+          color="#E0DDFF" 
+          blur={90}
+          initialX={300}
+          initialY={200}
+          animationDuration={28}
+          moveRange={45}
+        />
+        <FloatingOrb 
+          size={250} 
+          color="#F5F3FF" 
+          blur={80}
+          initialX={500}
+          initialY={80}
+          animationDuration={22}
+          moveRange={30}
+        />
+        
         <motion.article
           variants={containerVariants}
           initial="hidden"
@@ -105,7 +136,7 @@ function App() {
           </motion.p>
           <motion.article
             variants={containerVariants}
-            className='flex flex-col gap-4'
+            className='flex flex-row gap-4'
           >
             {features.map((feature, index) => (
               <Feature key={index} title={feature.title} description={feature.description} index={index} />
