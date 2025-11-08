@@ -110,12 +110,12 @@ function Main() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className='flex flex-col gap-2 lg:w-2/5 w-full z-10'
+          className='flex flex-col gap-2 lg:w-2/4 xl:w-2/5 w-full z-10'
         >
           <motion.img
             src={haxtrace_logo}
             variants={itemVariants}
-            className='h-4 lg:h-5 w-fit'
+            className='h-3 lg:h-5 w-fit'
             alt="HaxTrace Logo"
           />
           <motion.h1
@@ -135,7 +135,7 @@ function Main() {
           </motion.p>
           <motion.article
             variants={containerVariants}
-            className='flex flex-row gap-4'
+            className='flex flex-row items-center justify-center lg:gap-4'
           >
             {features.map((feature, index) => (
               <Feature key={index} title={feature.title} description={feature.description} index={index} />
