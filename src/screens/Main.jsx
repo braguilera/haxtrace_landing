@@ -135,7 +135,7 @@ function Main() {
           </motion.p>
           <motion.article
             variants={containerVariants}
-            className='flex flex-row items-center justify-center lg:gap-4'
+            className='flex flex-row  justify-center lg:gap-4'
           >
             {features.map((feature, index) => (
               <Feature key={index} title={feature.title} description={feature.description} index={index} />
