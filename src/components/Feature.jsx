@@ -23,8 +23,8 @@ const Feature = ({title, description, index}) => {
             className="text-center px-4 py-4 rounded-md"
         >
             <Check className="inline-block w-8 h-8 mb-2 bg-primary rounded-full text-white p-2" />
-            <h3 className="text-sm font-semibold py-1 text-zinc-600">{title}</h3>
-            <p className="text-xs text-zinc-500">
+            <h3 className="text-sm lg:text-base font-semibold py-1 text-zinc-600">{title}</h3>
+            <p className="text-xs lg:text-sm text-zinc-500">
                 {description}
             </p>
         </motion.article>

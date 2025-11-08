@@ -121,7 +121,7 @@ function App() {
           />
           <motion.h1
             variants={itemVariants}
-            className='text-4xl lg:text-6xl font-bold text-zinc-600'
+            className='text-4xl lg:text-5xl xl:text-6xl font-bold text-zinc-600'
           >
             Trazabilidad de mercadería
             <span className='text-primary pl-4'>
@@ -130,7 +130,7 @@ function App() {
           </motion.h1>
           <motion.p
             variants={itemVariants}
-            className='text-zinc-500 text-sm lg:text-base'
+            className='text-zinc-500 text-sm lg:text-lg'
           >
             Visualizá el estado de cada envío en tiempo real. Control total desde la salida del almacén hasta la confirmación de entrega.
           </motion.p>
