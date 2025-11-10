@@ -114,7 +114,7 @@ function Main() {
           <motion.img
             src={haxtrace_logo}
             variants={itemVariants}
-            className='h-3 w-auto md:h-5 '
+            className='h-3 md:h-5 max-w-fit object-contain'
             alt="HaxTrace Logo"
           />
           <motion.h1
