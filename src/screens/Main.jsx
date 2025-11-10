@@ -76,7 +76,6 @@ function Main() {
       <section
         className='overflow-hidden flex lg:flex-row flex-col lg:h-screen min-h-screen items-center lg:justify-start justify-center px-8 py-10 lg:pl-16 lg:pr-0 relative bg-white'
       >
-        {/* Bolas flotantes de fondo */}
         <FloatingOrb 
           size={400} 
           color="#E8E6FF" 
@@ -115,7 +114,7 @@ function Main() {
           <motion.img
             src={haxtrace_logo}
             variants={itemVariants}
-            className='h-5 w-fit'
+            className='h-3 w-fit md:h-5 '
             alt="HaxTrace Logo"
           />
           <motion.h1
@@ -146,25 +145,32 @@ function Main() {
             className='flex flex-col gap-2 py-4 w-full items-center'
           >
             <motion.div
-              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className='relative w-full rounded-md p-[3px] animate-shine'
+              className='relative w-full rounded-md p-[3px] animate-shine hover:scale-102 transition-all duration-400'
               style={{
                 backgroundImage: 'linear-gradient(90deg, rgba(133, 126, 224, 0.6) 0%, rgba(200, 195, 255, 0.9) 45%, rgba(255, 255, 255, 1) 50%, rgba(200, 195, 255, 0.9) 55%, rgba(133, 126, 224, 0.6) 100%)',
                 backgroundSize: '200% 100%',
               }}
             >
               <a
-                className='block bg-primary text-white px-4 py-2 w-full text-center rounded-md text-2xl font-semibold'
+                className='block bg-primary text-white px-4 py-2 w-full text-center rounded-md text-2xl font-semibold '
                 href="#" target="_blank" rel="noopener noreferrer"
               >
                 Iniciar sesión
               </a>
             </motion.div>
             <motion.a
-              whileHover={{ scale: 1.05, color: '#857EE0' }}
+              className='border-2 cursor-pointer border-primary rounded-md w-full text-center py-2 px-4 text-primary font-semibold hover:bg-primary hover:text-white transition-all duration-400'
+              href="#" target="_blank" rel="noopener noreferrer"
+
+              whileTap={{ scale: 0.99 }}
+            >
+              Descargar Logifleet
+            </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.95 }}
-              className='text-zinc-300 text-sm hover:font-semibold transition-all duration-200'
+              className='text-primary underline text-sm hover:font-semibold transition-all duration-200'
               href="https://www.quadrant.com.ar/" target="_blank" rel="noopener noreferrer"
             >
               Ir a Quadrant
